@@ -8,22 +8,21 @@ namespace FirstTask.ZefFirstTask
 {
     public static class Task1C
     {
-        public static double Calculate(double e, double StartK)
+        public static double Calculate(double e)
         {
-            int i;
-            double k;
+            double i = 0;
             double SumC = 0;
-            for (k = StartK; k > 0; k++)
+            double SumT;
+            while(true)
             {
-                for (i = 1; i <= k; i++)
-                {
-                    SumC = Math.Pow(-1, i) / Factorial(i);
-                    if (Math.Abs(SumC) < e) break;
-                }
+                SumT = Math.Pow(-1, i) / Factorial(i);
+                i++;
+                if (Math.Abs(SumT) < e) break;
+                SumC += SumT;
             }
             return SumC;
         }
-        static int Factorial(int i)
+        static double Factorial(double i)
         {
             if (i == 0)
             {
