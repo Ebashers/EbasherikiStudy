@@ -10,7 +10,7 @@ namespace FirstTask.ZefFirstTask
     {
         public static double Calculate(double e, double StartK)
         {
-            int i = 0;
+            int i;
             double k;
             double SumC = 0;
             for (k = StartK; k > 0; k++)
