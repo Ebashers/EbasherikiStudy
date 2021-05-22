@@ -13,7 +13,7 @@ namespace FirstTask.ZefFirstTask
             double SumB = 0;
             for (int i = 1; i <= n; i++)
             {
-                if (l%2==0)
+                if (l % 2 == 0)
                 {
                     SumB += ((1 / Math.Sqrt(t)) * l);
                 }

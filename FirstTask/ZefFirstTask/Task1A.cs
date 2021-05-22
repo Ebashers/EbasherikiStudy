@@ -8,19 +8,23 @@ namespace FirstTask.ZefFirstTask
 {
     public static class Task1A
     {
-        public static double Calculate(double z)
+        public static double Calculate(double z, double k)
         {
             int i;
-            double k;
-            double sum = 0;
-            for (k=0; k<15; k++)
+            double SumA = 0;
+            if (z < 15)
             {
-                for (i=1; i<=k; i++)
+                for (i = 1; i <= k; i++)
                 {
-                    sum += ((1 / Math.Sqrt(z * i)) + Math.Tan(k / i));
+                    SumA += ((1 / Math.Sqrt(z * i)) + Math.Tan(k / i));
                 }
+                return SumA;
             }
-            return sum;
+            else
+            {
+                Console.WriteLine("Fuck you");
+                return 0;
+            }
         }
     }
 }
