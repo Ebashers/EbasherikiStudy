@@ -7,6 +7,19 @@ namespace FirstTask
     {
         static void Main(string[] args)
         {
+            //Test1
+            Console.WriteLine("Test");
+
+            Console.WriteLine("Enter a z variable");
+            double TestZ = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter a k variable");
+            double TestK = Convert.ToDouble(Console.ReadLine());
+
+            double TestSum = Test.Calculate(TestZ, TestK);
+            Console.WriteLine("sum = " + TestSum);
+            //end
+
             //zefirlover's Task1A
             Console.WriteLine("First task");
 
@@ -15,7 +28,7 @@ namespace FirstTask
 
             double sum = Task1A.Calculate(z);
             Console.WriteLine("sum = " + sum);
-            //zefirlover's Task1A end
+            //end
 
             //zefirlover's Task1B
             Console.WriteLine("Second task");
@@ -31,8 +44,20 @@ namespace FirstTask
 
             double SumB = Task1B.Calculate(t, n, l);
             Console.WriteLine("sum = " + SumB);
-            //zefirlover's Task1B end
+            //end
 
+            //zefirlover's Task1C
+            Console.WriteLine("Third task");
+
+            Console.WriteLine("Enter a e variable");
+            double e = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter a k variable");
+            double StartK = Convert.ToDouble(Console.ReadLine());
+
+            double SumC = Task1C.Calculate(e, StartK);
+            Console.WriteLine("sum = " + SumC);
+            //end
         }
     }
 }
