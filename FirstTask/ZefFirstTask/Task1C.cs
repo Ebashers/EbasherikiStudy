@@ -11,16 +11,16 @@ namespace FirstTask.ZefFirstTask
         public static double Calculate(double e)
         {
             double i = 0;
-            double SumC = 0;
-            double SumT;
+            double sumC = 0;
+            double sumInitial;
             while(true)
             {
-                SumT = Math.Pow(-1, i) / Factorial(i);
+                sumInitial = Math.Pow(-1, i) / Factorial(i);
                 i++;
-                if (Math.Abs(SumT) < e) break;
-                SumC += SumT;
+                if (Math.Abs(sumInitial) < e) break;
+                sumC += sumInitial;
             }
-            return SumC;
+            return sumC;
         }
         static double Factorial(double i)
         {

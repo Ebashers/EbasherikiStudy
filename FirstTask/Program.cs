@@ -7,6 +7,12 @@ namespace FirstTask
     {
         static void Main(string[] args)
         {
+            //code to use "args"
+            if (args is null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             //zefirlover's Task1A
             Console.WriteLine("First task");
 
@@ -16,8 +22,12 @@ namespace FirstTask
             Console.WriteLine("Enter a k variable");
             double k = Convert.ToDouble(Console.ReadLine());
 
-            double SumA = Task1A.Calculate(z, k);
-            Console.WriteLine("sum = " + SumA);
+            if (z < 15)
+            {
+                double sumA = Task1A.Calculate(z, k);
+                Console.WriteLine("sum = " + sumA);
+            }
+            else Console.WriteLine("Fuck you");
             //end
 
             //zefirlover's Task1B
@@ -34,8 +44,8 @@ namespace FirstTask
 
             if (t > 0)
             {
-                double SumB = Task1B.Calculate(t, n, l);
-                Console.WriteLine("sum = " + SumB);
+                double sumB = Task1B.Calculate(t, n, l);
+                Console.WriteLine("sum = " + sumB);
             }
             else Console.WriteLine("Fuck you");
             //end
@@ -46,8 +56,8 @@ namespace FirstTask
             Console.WriteLine("Enter a e variable");
             double e = Convert.ToDouble(Console.ReadLine());
 
-            double SumC = Task1C.Calculate(e);
-            Console.WriteLine("sum = " + SumC);
+            double sumC = Task1C.Calculate(e);
+            Console.WriteLine("sum = " + sumC);
             //end
         }
     }

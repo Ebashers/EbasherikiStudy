@@ -11,20 +11,12 @@ namespace FirstTask.ZefFirstTask
         public static double Calculate(double z, double k)
         {
             int i;
-            double SumA = 0;
-            if (z < 15)
+            double sumA = 0;
+            for (i = 1; i <= k; i++)
             {
-                for (i = 1; i <= k; i++)
-                {
-                    SumA += ((1 / Math.Sqrt(z * i)) + Math.Tan(k / i));
-                }
-                return SumA;
+                sumA += ((1 / Math.Sqrt(z * i)) + Math.Tan(k / i));
             }
-            else
-            {
-                Console.WriteLine("Fuck you");
-                return 0;
-            }
+            return sumA;
         }
     }
 }

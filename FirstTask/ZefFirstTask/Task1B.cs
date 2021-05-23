@@ -10,19 +10,20 @@ namespace FirstTask.ZefFirstTask
     {
         public static double Calculate(double t, double n, int l)
         {
-            double SumB = 0;
+            double sumB = 0;
             for (int i = 1; i <= n; i++)
             {
+                //if l isn't multiple of 2
                 if (l % 2 == 0)
                 {
-                    SumB += ((1 / Math.Sqrt(t)) * l);
+                    sumB += ((1 / Math.Sqrt(t)) * l);
                 }
                 else
                 {
-                    SumB += ((1 / t) * l);
+                    sumB += ((1 / t) * l);
                 }
             }
-            return SumB;
+            return sumB;
         }
     }
 }
