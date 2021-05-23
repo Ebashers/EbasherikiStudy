@@ -1,5 +1,6 @@
-﻿using System;
-using FirstTask.ZefFirstTask;
+﻿using FirstTask.MathModule;
+using System;
+
 
 namespace FirstTask
 {
