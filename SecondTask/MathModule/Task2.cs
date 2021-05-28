@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace SecondTask.MathModule
 {
@@ -10,14 +6,7 @@ namespace SecondTask.MathModule
     {
         public static int Calculate(int[] secondArray)
         {
-            int maxValue = int.MinValue;
-            foreach (int a in secondArray)
-            {
-                if (a > maxValue)
-                {
-                    maxValue = a;
-                }
-            }
+            int maxValue = secondArray.Max();
             int sum = maxValue + secondArray[1];
             return sum;
         }
