@@ -50,7 +50,22 @@ namespace FirstTask
             Console.WriteLine("sum = " + sum);
             //end
 
+            Console.WriteLine("Second task");
 
+            Console.WriteLine("Enter values to array");
+            int[] thirdArray = new int[4];
+            Console.WriteLine("Enter first value");
+            secondArray[0] = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second value");
+            secondArray[1] = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third value");
+            secondArray[2] = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter fourth value");
+            secondArray[3] = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("array = ");
+            int[] fourthArray = Task3.Calculate(thirdArray);
+            Console.WriteLine(fourthArray);
         }
     }
 }
