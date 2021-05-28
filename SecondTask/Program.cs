@@ -50,7 +50,8 @@ namespace FirstTask
             Console.WriteLine("sum = " + sum);
             //end
 
-            Console.WriteLine("Second task");
+            //Task3
+            Console.WriteLine("Third task");
 
             Console.WriteLine("Enter values to array");
             int[] thirdArray = new int[4];
@@ -66,6 +67,7 @@ namespace FirstTask
             Console.WriteLine("array = ");
             int[] fourthArray = Task3.Calculate(thirdArray);
             Console.WriteLine(fourthArray);
+            //end
         }
     }
 }

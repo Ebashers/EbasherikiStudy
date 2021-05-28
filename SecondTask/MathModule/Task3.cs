@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SecondTask.MathModule
 {
@@ -11,15 +8,8 @@ namespace SecondTask.MathModule
         public static int[] Calculate(int[] thirdArray)
         {
             int[] fourthArray = new int[thirdArray.Length];
-
             int maxValue = thirdArray.Max();
-            //foreach (int a in thirdArray)
-            //{
-            //    if (a > maxValue)
-            //    {
-            //        maxValue = a;
-            //    }
-            //}
+
             for (int i = 0; i < thirdArray.Length; i++)
             {
                 //debug variable
