@@ -15,7 +15,7 @@
 .logo{
     font-family: sans-serif;
     color: rgb(95,207,128);
-    margin-left: 10rem;
+    margin-left: 50rem;
     cursor: pointer;
     margin-top: 1rem;
 }
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: row;
     color: rgb(147,137,134);
-    margin-left: 13rem;
+    margin-left: 20rem;
     margin-right: 2rem;
     font-family: sans-serif;
     font-size: 0.7rem;
@@ -70,7 +70,7 @@
 }
 .trust{
     display: inline-flex;
-    width: 17%;
+    width: 9%;
     margin-top: 10rem;
     font-family: sans-serif;
     color: white;
