@@ -22,6 +22,7 @@ namespace FirstTask
                         Console.WriteLine("a >= 0");
                         Console.WriteLine("Enter a variable");
                         double a = Convert.ToDouble(Console.ReadLine());
+                        
 
                         Console.WriteLine("b >= 0");
                         Console.WriteLine("Enter b variable");
@@ -64,6 +65,15 @@ namespace FirstTask
                         }
                         else Console.WriteLine("Not today");
 
+                        break;
+
+                    case "3":
+                        
+                        Console.WriteLine("Third expression");
+                        Console.WriteLine("Enter e variable");
+                        double e = Convert.ToDouble(Console.ReadLine());
+                        double thirdSum = ThirdExp.Calc(e);
+                        Console.WriteLine("sum = " + thirdSum);
                         break;
                     
                     default: throw new AggregateException("Unaccepteble operation code");

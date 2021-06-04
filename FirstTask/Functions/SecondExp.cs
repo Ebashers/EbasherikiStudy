@@ -7,7 +7,7 @@ namespace FirstTask.Functions
         public static double Calc(double t, double l)
         {
             double sum2 = 0;
-            for (int i = 1; i <= t; i++)
+            for (var i = 1; i <= t; i++)
             {
                 if (l % 2==1)
                 {
