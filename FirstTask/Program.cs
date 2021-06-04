@@ -112,6 +112,10 @@ namespace FirstTask
                         break;
                     //end
                     
+                    case "0":
+                        Console.WriteLine("Exiting");
+                        break;
+                    
                     default:
                         Console.WriteLine("Enter valid number");
                         break;
