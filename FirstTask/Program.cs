@@ -32,7 +32,7 @@ namespace FirstTask
                         Console.WriteLine("Enter k variable");
                         double k = Convert.ToDouble(Console.ReadLine());
 
-                        if (k > 2 & k <= 25 & s >= 0 & t < 0)
+                        if (k > 2 && k <= 25 && s >= 0 && t < 0)
                         {
                             double firstSum = FirstSolution.Calculate(t, s, k);
                             Console.WriteLine("sum = " + firstSum);
@@ -49,14 +49,14 @@ namespace FirstTask
                         Console.WriteLine("Enter i variable");
                         double i = Convert.ToDouble(Console.ReadLine());
 
-                        if (i == 1 | i == 2)
+                        if (i == 1 || i == 2)
                         {
                             Console.WriteLine("t > 0");   
                         }
                         Console.WriteLine("Enter t variable");
                         t = Convert.ToDouble(Console.ReadLine());
 
-                        if ((t > 0 & (i == 1 | i == 2)) | (i > 2))
+                        if ((t > 0 && (i == 1 || i == 2)) || (i > 2))
                         {
                             double secondSum = SecondSolution.Calculate(t, i);
                             Console.WriteLine("sum = " + secondSum);
@@ -76,6 +76,10 @@ namespace FirstTask
                         Console.WriteLine("sum = " + thirdSum);
                         break;
                     //end
+                    
+                    default:
+                        Console.WriteLine("Enter valid number");
+                        break;
                 }
             }
         }
