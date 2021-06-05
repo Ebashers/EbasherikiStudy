@@ -11,7 +11,7 @@ namespace FirstTask
             string id = "";
             while (id != "0")
             {
-                Console.WriteLine("1 = First task\n2 = Second task\n3 = Third task\n4 = Arrays task\n0 = Exit");
+                Console.WriteLine("1 = First task\n2 = Second task\n3 = Third task\n0 = Exit");
                 id = Console.ReadLine();
                 switch (id)
                 {
