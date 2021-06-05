@@ -1,14 +1,14 @@
-namespace FirstTask.ListModule
+namespace SecondTask.ListModule
 {
-    public static class TaskA
+    public class TaskB
     {
         public static double Calculate(int[] list, int length)
         {
             int i;
             double sum = 0;
-            for (i = 0; i < length; i++)
+            for (i = 1; i < length; i += 2)
             {
-                if (list[i] > 3)
+                if (list[i] % 2 == 0)
                 {
                     sum += list[i];   
                 }

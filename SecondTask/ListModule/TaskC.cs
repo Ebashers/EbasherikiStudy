@@ -1,6 +1,6 @@
 using System;
 
-namespace FirstTask.ListModule
+namespace SecondTask.ListModule
 {
     public class TaskC
     {
