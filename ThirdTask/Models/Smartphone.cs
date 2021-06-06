@@ -8,6 +8,7 @@ namespace ThirdTask.Models
 {
     class Smartphone : Telephone
     {
+        // захуярить сюди ктор чи хз блять
         public override string Call()
         {
             throw new NotImplementedException();
