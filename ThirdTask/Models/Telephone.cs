@@ -11,10 +11,5 @@ namespace ThirdTask.Models
         // блять нахуй сука піздєц я не понімаю як з цією хуйнею работать, нахуя тут ктор, нада тут ктор, шо, куда блять, єбаний рот
         public abstract string Call();
         public abstract string Charge();
-        public Telephone(string _Call, string _Charge)
-        {
-            _Call = Call().ToString();
-            _Charge = Charge().ToString();
-        }
     }
 }
