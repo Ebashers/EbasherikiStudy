@@ -8,15 +8,20 @@ namespace ThirdTask.Models
 {
     class Smartphone : Telephone
     {
-        // захуярить сюди ктор чи хз блять
-        public override string Call()
+        public int Ram { get; set; }
+        public Smartphone(int year) : base(year)
         {
-            throw new NotImplementedException();
         }
 
-        public override string Charge()
+        public override string Call(string callVar)
         {
-            throw new NotImplementedException();
+            return base.Call(callVar) + "hui";
         }
+
+        //public override string Charge(string chargeVar)
+        //{
+        //    chargeVar = "4000mAc";
+        //    return chargeVar;
+        //}
     }
 }
