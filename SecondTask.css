@@ -1,0 +1,38 @@
+*,*:focus,*:hover{
+    outline:none;
+}
+.label_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2rem;
+}
+.row_item{
+    display: block;
+    border: 4px solid red;
+    border-radius: 0.3rem;
+    padding: 0.7rem 0.8rem;
+    font-size: 1rem;
+    color: red;
+}
+input::placeholder{
+    color: red;
+}
+table{
+    border: 1px solid grey;
+    border-collapse:collapse;
+    border-spacing: 7px 11px;
+}
+.center{
+    margin-top: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td{
+    border: 1px solid black;
+    width: 10%;
+    height: 50%;
+}
