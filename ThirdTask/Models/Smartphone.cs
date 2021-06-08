@@ -8,20 +8,38 @@ namespace ThirdTask.Models
 {
     class Smartphone : Telephone
     {
-        public int Ram { get; set; }
         public Smartphone(int year) : base(year)
         {
         }
 
-        public override string Call(string callVar)
+        public override int Battery(int batteryCharge)
         {
-            return base.Call(callVar) + "hui";
+            int i = 0;
+            bool fastCharger;
+            if (fastCharger = true)
+            {
+                batteryCharge = batteryCharge + 2;
+                i++;
+            }
+            else
+            {
+                base.Battery(batteryCharge);
+            }
+            return base.Battery(batteryCharge);
+            return batteryCharge;
         }
 
-        //public override string Charge(string chargeVar)
-        //{
-        //    chargeVar = "4000mAc";
-        //    return chargeVar;
-        //}
+        public override string Communication()
+        {
+            base.Communication();
+            bool mobileInternet;
+            bool mobileConnection = true;
+            if (mobileConnection = true)
+            {
+                mobileInternet = true;
+            }
+            return base.Communication();
+            return mobileInternet.ToString();
+        }
     }
 }
