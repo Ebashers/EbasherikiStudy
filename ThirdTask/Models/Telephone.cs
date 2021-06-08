@@ -23,7 +23,7 @@ namespace ThirdTask.Models
             {
                 charger = false;
             }
-            if (charger == false)
+            if (!charger)
             {
                 batteryCharge--;
                 i++;
