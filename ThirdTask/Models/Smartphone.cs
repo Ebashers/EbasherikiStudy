@@ -29,16 +29,16 @@ namespace ThirdTask.Models
             return batteryCharge;
         }
 
-        public override string Communication()
+        public override string Communication(string provider, string weatherWariable)
         {
-            base.Communication();
+            base.Communication(provider, weatherWariable);
             bool mobileInternet;
             bool mobileConnection = true;
             if (mobileConnection = true)
             {
                 mobileInternet = true;
             }
-            return base.Communication();
+            return base.Communication(provider, weatherWariable);
             return mobileInternet.ToString();
         }
     }
