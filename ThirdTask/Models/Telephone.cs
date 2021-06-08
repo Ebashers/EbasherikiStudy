@@ -15,10 +15,40 @@ namespace ThirdTask.Models
             Year = year;
         }
         public int Year { get; private set; }
-        public virtual string Call(string callVar)
+        public virtual int Battery(int batteryCharge)
         {
-            return callVar;
+            int i = 0;
+            bool charger = false;
+            if (batteryCharge >= 100)
+            {
+                charger = false;
+            }
+            if (charger == false)
+            {
+                batteryCharge--;
+                i++;
+            }
+            else
+            {
+                batteryCharge++;
+                i++;
+            }
+            return batteryCharge;
         }
-        //public abstract string Charge(string chargeVar = "1000mAc");
+        public virtual string Communication()
+        {
+            string provider = "NoProvider";
+            bool mobileConnection = true;
+            string[] weather = new string[] { "sunny", "cloudy", "rainy", "stormy" };
+            bool call = false;
+            if (mobileConnection = true)
+            {
+                call = true;
+            }
+
+            return provider;
+            return mobileConnection.ToString();
+            return call.ToString();
+        }
     }
 }

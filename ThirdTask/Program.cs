@@ -9,11 +9,9 @@ namespace ThirdTask
         {
             Smartphone smartphone = new Smartphone(2002);
             Telephone telephone = new Telephone(2001);
-            string callVar = telephone.Call("1");
-            string callVar2 = smartphone.Call("1");
+            int batteryCharge1 = telephone.Battery(100);
             
-            Console.WriteLine(callVar);
-            Console.WriteLine(callVar2);
+            Console.WriteLine(batteryCharge1);
             Console.ReadKey();
         }
     }
