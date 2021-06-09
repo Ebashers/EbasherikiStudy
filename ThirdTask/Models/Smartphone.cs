@@ -42,14 +42,14 @@ namespace ThirdTask.Models
             }
             else mobileConnection = true;
 
-            if (mobileConnection = true)
+            if (mobileConnection)
             {
                 mobileInternet = true;
             }
             else mobileInternet = false;
 
-            return base.Communication(provider, weatherWariable, mobileConnection, call);
-            return mobileInternet.ToString();
+            string result = $"{base.Communication(provider, weatherWariable, mobileConnection, call)}. Internet: {mobileInternet}";
+            return result;
         }
     }
 }
