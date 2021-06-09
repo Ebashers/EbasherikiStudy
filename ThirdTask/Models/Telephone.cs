@@ -50,7 +50,6 @@ namespace ThirdTask.Models
                 call = true;
             }
             else call = false;
-
             return provider;
             return mobileConnection.ToString();
             return call.ToString();
