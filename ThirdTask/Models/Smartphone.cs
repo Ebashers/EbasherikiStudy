@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ThirdTask.Models
 {
     class Smartphone : Telephone
@@ -17,7 +12,6 @@ namespace ThirdTask.Models
         public override int Battery(int batteryCharge)
         {
             int i = 0;
-            //bool fastCharger = true;
             if (batteryCharge >= 100)
             {
                 FastCharger = false;
