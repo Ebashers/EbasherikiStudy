@@ -15,10 +15,10 @@ namespace ThirdTask.Models
         public override int Battery(int batteryCharge)
         {
             int i = 0;
-            bool fastCharger;
-            if (fastCharger = true)
+            bool fastCharger = true;
+            if (fastCharger)
             {
-                batteryCharge = batteryCharge + 2;
+                batteryCharge += 2;
                 i++;
             }
             else
@@ -33,7 +33,6 @@ namespace ThirdTask.Models
         {
             base.Communication(provider, weatherWariable);
             bool mobileInternet;
-            bool mobileConnection = true;
             if (mobileConnection = true)
             {
                 mobileInternet = true;
