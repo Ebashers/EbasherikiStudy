@@ -35,24 +35,23 @@ namespace ThirdTask.Models
             }
             return batteryCharge;
         }
-        public virtual string Communication(string provider, string weatherWariable)
+        public virtual string Communication(string provider, string weatherWariable, bool mobileConnection, bool call)
         {
-            bool mobileConnection;
-            bool call;
             string[] weather = new string[] { "sunny", "cloudy", "rainy", "stormy" };
-            if (weatherWariable == weather[4])
+            if (weatherWariable == weather[3])
             {
                 mobileConnection = false;
             }
             else mobileConnection = true;
+
             if (mobileConnection)
             {
                 call = true;
             }
             else call = false;
-            return provider;
-            return mobileConnection.ToString();
-            return call.ToString();
+
+            string result = $"Provider: {provider}. MobileConnection: {mobileConnection}. Call: {call}";
+            return result;
         }
     }
 }
