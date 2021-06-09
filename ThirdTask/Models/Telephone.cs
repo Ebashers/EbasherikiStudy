@@ -18,7 +18,7 @@ namespace ThirdTask.Models
         public virtual int Battery(int batteryCharge)
         {
             int i = 0;
-            bool charger = false;
+            bool charger = true;
             if (batteryCharge >= 100)
             {
                 charger = false;

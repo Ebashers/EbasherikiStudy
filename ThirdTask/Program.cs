@@ -7,10 +7,10 @@ namespace ThirdTask
     {
         static void Main(string[] args)
         {
-            Smartphone smartphone = new Smartphone(2002);
+            Smartphone smartphone = new Smartphone(2002, false);
             Telephone telephone = new Telephone(2001);
             int batteryCharge1 = telephone.Battery(100);
-            int batteryCharge2 = smartphone.Battery(100);
+            int batteryCharge2 = smartphone.Battery(40);
             string mobileConnection1 = telephone.Communication("kyivstar", "stormy", false, false);
             string mobileConnection2 = smartphone.Communication("kyivstar", "stormy", false, false);
 

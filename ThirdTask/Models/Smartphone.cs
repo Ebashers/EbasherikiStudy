@@ -8,25 +8,39 @@ namespace ThirdTask.Models
 {
     class Smartphone : Telephone
     {
-        public Smartphone(int year) : base(year)
+        public Smartphone(int year, bool fastCharger) : base(year)
         {
+            FastCharger = fastCharger;
         }
 
+        public bool FastCharger { get; set; }
         public override int Battery(int batteryCharge)
         {
             int i = 0;
-            bool fastCharger = true;
-            if (fastCharger)
+            //bool fastCharger = true;
+            if (batteryCharge >= 100)
+            {
+                FastCharger = false;
+            }
+
+            // overpower (101) exception
+            if (FastCharger && batteryCharge == 99)
+            {
+                batteryCharge++;
+                i++;
+                return batteryCharge;
+            }
+
+            if (FastCharger && batteryCharge < 100)
             {
                 batteryCharge += 2;
                 i++;
+                return batteryCharge;
             }
             else
             {
-                base.Battery(batteryCharge);
+                return base.Battery(batteryCharge);
             }
-            return base.Battery(batteryCharge);
-            return batteryCharge;
         }
 
         public override string Communication(string provider, string weatherWariable, bool mobileConnection, bool call)
