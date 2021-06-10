@@ -6,7 +6,7 @@ namespace FirstTask.MathModules
     {
         public static double Calculate(double e)
         {
-            double i = 0;
+            double i = 1;
             double sum = 0;
             double sumInitial;
             while (true)
