@@ -1,4 +1,4 @@
-namespace FirstTask.MathModules
+namespace FirstTask.MathModules_2
 {
     //Find sum min positive + sum number - 2_31
     

@@ -1,6 +1,6 @@
 using System;
 
-namespace FirstTask.MathModules
+namespace FirstTask.MathModules_1
 {
     public static class Task1A
     {
