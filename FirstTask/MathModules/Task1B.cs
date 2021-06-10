@@ -7,25 +7,23 @@ namespace FirstTask.MathModules
         public static double Calculate(double t, double i)
         {
             double res = 0;
-            for (int k = 1; k <= i; k++)
+            if (i == 1)
             {
-                //Сonsider the 3 conditions of the task
-                if (i == 1)
+                res += Math.Sqrt(t);
+            }
+            else
+            {
+                if (i == 2)
                 {
-                    res += Math.Sqrt(t);
+                    res += 1 / Math.Sqrt(t);
                 }
                 else
                 {
-                    if (i == 2)
-                    {
-                        res += 1 / Math.Sqrt(t);
-                    }
-                    else
+                    for (int k = 1; k <= i; k++)
                     {
                         res += k * t;
                     }
                 }
-                
             }
             return res;
         }
