@@ -1,4 +1,5 @@
-﻿using FirstTask.MathModules;
+﻿using FirstTask.MathModules_1;
+using FirstTask.MathModules_2;
 using System;
 
 
