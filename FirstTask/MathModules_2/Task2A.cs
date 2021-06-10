@@ -2,19 +2,17 @@ namespace FirstTask.MathModules_2
 {
     //Find the number of positive elements - 2_1
     
-    public static class Task1
+    public static class Task2A
     {
-        public static int Calculate(int[] firstArray)
+        public static int numberofPositive(int[] firstArray)
         {
-            int maxValue = int.MinValue;
-            foreach (int a in firstArray)
-            {
-                if (a > maxValue)
-                {
-                    maxValue = a;
-                }
+            //returns number of positive elements in arr 
+            int res = 0;
+            foreach (int value in firstArray){
+                if(value > 0)
+                    res++;
             }
-            return maxValue;
+            return res;
         }
     }
 }
