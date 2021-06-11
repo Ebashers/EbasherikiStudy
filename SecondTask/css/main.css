@@ -1,0 +1,20 @@
+﻿.test {
+    background-color: #0026ff;
+}
+.cyan{
+    color: #00e682;
+}
+.ovalbutton {
+    background-color: #00e682;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+}
+.ovalbutton1{
+    border-radius: 20px;
+}
