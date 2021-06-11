@@ -11,20 +11,18 @@ namespace FirstTask.MathModules_1
             {
                 res += Math.Sqrt(t);
             }
+            else if (i == 2)
+            {
+                res += 1 / Math.Sqrt(t);
+            }
             else
             {
-                if (i == 2)
+                for (int k = 1; k <= i; k++)
                 {
-                    res += 1 / Math.Sqrt(t);
-                }
-                else
-                {
-                    for (int k = 1; k <= i; k++)
-                    {
-                        res += k * t;
-                    }
+                    res += k * t;
                 }
             }
+            
             return res;
         }
     }
