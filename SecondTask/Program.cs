@@ -24,7 +24,7 @@ namespace SecondTask
                 }
 
                 Console.WriteLine("");
-                Console.WriteLine("Sum of elements which are more than 3 = " + TaskA.Calculate(rlist, listSize));
+                Console.WriteLine("Sum of elements which are more than 3 = " + TaskA.Calculate(rlist));
                 //Second part
                 Console.WriteLine("List with positions");
                 for (int l = 0; l < listSize; l++)
@@ -33,10 +33,10 @@ namespace SecondTask
                 }
 
                 Console.WriteLine("Sum of even elements of the array, standing in odd places = "
-                                  + TaskB.Calculate(rlist, listSize));
+                                  + TaskB.Calculate(rlist));
                 //Third part
                 Console.WriteLine("New list:");
-                double[] newList = TaskC.Calculate(rlist, listSize);
+                double[] newList = TaskC.Calculate(rlist);
                 for (int l = 0; l < listSize; l++)
                 {
                     Console.Write(newList[l] + " ");

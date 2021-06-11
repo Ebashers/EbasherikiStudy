@@ -2,11 +2,11 @@ namespace SecondTask.ListModule
 {
     public static class TaskA
     {
-        public static double Calculate(int[] list, int length)
+        public static double Calculate(int[] list)
         {
             int i;
             double sum = 0;
-            for (i = 0; i < length; i++)
+            for (i = 0; i < list.Length; i++)
             {
                 if (list[i] > 3)
                 {
