@@ -8,15 +8,22 @@ namespace FirstTask.MathModules_1
         {
             int i;
             double sumA = 0;
-            for (i = 1; i <= k; i++)
+            if (m == 0)
             {
-                if (m == 0)
+                sumA = 0;
+            }
+            else
+            {
+                for (i = 1; i <= k; i++)
                 {
-                    sumA = 0;
-                }
-                else
-                {
-                    sumA += ((Math.Sqrt(m * 1 / i)) * Math.Sin(m * i));
+                    if (m > 0)
+                    {
+                        sumA += ((Math.Sqrt(m * 1 / i)) * Math.Sin(m * i));
+                    }
+                    else
+                    {
+                        Console.WriteLine("m < 0, wrong");
+                    }
                 }
             }
             return sumA;
