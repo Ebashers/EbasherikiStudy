@@ -3,12 +3,11 @@ namespace ThirdTask.Models
 {
     class Smartphone : Telephone
     {
+        public bool FastCharger { get; set; }
         public Smartphone(int year, bool fastCharger) : base(year)
         {
             FastCharger = fastCharger;
         }
-
-        public bool FastCharger { get; set; }
         public override int Battery(int batteryCharge)
         {
             int i = 0;

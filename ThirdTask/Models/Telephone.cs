@@ -3,11 +3,11 @@ namespace ThirdTask.Models
 {
     class Telephone
     {
+        public int Year { get; private set; }
         public Telephone(int year)
         {
             Year = year;
         }
-        public int Year { get; private set; }
         public virtual int Battery(int batteryCharge)
         {
             int i = 0;
