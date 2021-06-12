@@ -4,7 +4,6 @@ namespace ThirdTask.Models
     class Smartphone : Telephone
     {
         public bool MobileInternet { get; private set; }
-        public bool MobileConnection { get; private set; }
         public bool FastCharger { get; set; }
         public Smartphone(int year, bool fastCharger, bool mobileConnection, bool call, bool mobileInternet) : base(year, mobileConnection, call)
         {
