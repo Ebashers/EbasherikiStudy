@@ -16,19 +16,34 @@
 .cyan{
     color: #00e682;
 }
+.cyan:hover {
+    color: #212529;
+}
+.headrefs {
+    color: #212529
+}
+.headrefs:hover {
+    color: #00e682;
+}
 .ovalbutton {
     background-color: #00e682;
-    border: none;
+    border: 4px, #00e682;
     color: white;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    /*margin: 1px 2px;*/
+    margin: 1px 2px;
+    border: 2px solid #00e682;
 }
 .ovalbutton1{
     border-radius: 20px;
+}
+.ovalbutton:hover{
+    background-color: white;
+    border: 2px solid #00e682;
+    color: #00e682;
 }
 .ovalbutton2 {
     background-color: #00e682;
@@ -40,6 +55,12 @@
     display: inline-block;
     font-size: 16px;
     margin: 2px 1px;
+    border: 2px solid #00e682;
+}
+.ovalbutton2:hover {
+    background-color: transparent;
+    border: 2px solid #00e682;
+    color: #00e682;
 }
 .recktangle {
     margin: auto;
