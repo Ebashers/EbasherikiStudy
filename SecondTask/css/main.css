@@ -1,6 +1,18 @@
 ﻿.office {
-    background-image: url('../img/office.jpg');
+    position: relative;
+    background: url('../img/office.jpg') no-repeat center;
+    z-index: 3;
 }
+    .office::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.6);
+        z-index: -1;
+    }
 .cyan{
     color: #00e682;
 }
@@ -17,4 +29,27 @@
 }
 .ovalbutton1{
     border-radius: 20px;
+}
+.ovalbutton2 {
+    background-color: #00e682;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+}
+.recktangle {
+    margin: auto;
+    max-width: 50%;
+    border: 5px solid #00e682;
+    padding: 30px;
+}
+.bottomtext{
+    margin: 0, 40px;
+}
+.uppertext {
+    margin: 20px;
 }
