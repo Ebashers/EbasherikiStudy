@@ -11,6 +11,7 @@ namespace ThirdTask.Models
             MobileConnection = mobileConnection;
             MobileInternet = mobileInternet;
         }
+
         public override int Battery(int batteryCharge)
         {
             int i = 0;
@@ -39,13 +40,13 @@ namespace ThirdTask.Models
             }
         }
 
-        public override string Communication(string provider, string weatherWariable)
+        public override string Communication(string provider, string connectionWariable)
         {
-            base.Communication(provider, weatherWariable);
+            base.Communication(provider, connectionWariable);
 
             // kolkhoz moment
-            string[] weather = new string[] { "sunny", "cloudy", "rainy", "stormy" };
-            if (weatherWariable == weather[3])
+            string[] connections = new string[] { "sunny", "cloudy", "rainy", "stormy" };
+            if (connectionWariable == connections[3])
             {
                 MobileConnection = false;
             }
@@ -57,7 +58,7 @@ namespace ThirdTask.Models
             }
             else MobileInternet = false;
 
-            string result = $"{base.Communication(provider, weatherWariable)}. Internet: {MobileInternet}";
+            string result = $"{base.Communication(provider, connectionWariable)}. Internet: {MobileInternet}";
             return result;
         }
     }

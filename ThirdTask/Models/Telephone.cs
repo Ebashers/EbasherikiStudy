@@ -6,13 +6,6 @@ namespace ThirdTask.Models
         public int Year { get; private set; }
         public bool MobileConnection { get; set; }
         public bool Call { get; set; }
-        //public enum Weather
-        //{
-        //    Sunny,
-        //    Cloudy,
-        //    Rainy,
-        //    Stormy
-        //}
         public Telephone(int year, bool mobileConnection, bool call)
         {
             Year = year;
@@ -39,10 +32,10 @@ namespace ThirdTask.Models
             }
             return batteryCharge;
         }
-        public virtual string Communication(string provider, string weatherWariable)
+        public virtual string Communication(string provider, string connectionWariable)
         {
-            string[] weather = new string[] { "sunny", "cloudy", "rainy", "stormy" };
-            if (weatherWariable == weather[3])
+            string[] connections = new string[] { "the best", "great", "good", "bad" };
+            if (connectionWariable == connections[3])
             {
                 MobileConnection = false;
             }

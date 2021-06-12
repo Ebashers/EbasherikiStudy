@@ -17,8 +17,8 @@ namespace ThirdTask
             Telephone telephone = new Telephone(2001, false, false);
             int batteryCharge1 = telephone.Battery(100);
             int batteryCharge2 = smartphone.Battery(40);
-            string mobileConnection1 = telephone.Communication("kyivstar", "stormy");
-            string mobileConnection2 = smartphone.Communication("kyivstar", "stormy");
+            string mobileConnection1 = telephone.Communication("kyivstar", "good");
+            string mobileConnection2 = smartphone.Communication("kyivstar", "good");
 
             Console.WriteLine("Battery Charge");
             Console.WriteLine(batteryCharge1);
