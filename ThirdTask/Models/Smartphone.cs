@@ -45,7 +45,7 @@ namespace ThirdTask.Models
             base.Communication(provider, connectionWariable);
 
             // kolkhoz moment
-            string[] connections = new string[] { "sunny", "cloudy", "rainy", "stormy" };
+            string[] connections = new string[] { "the best", "great", "good", "bad" };
             if (connectionWariable == connections[3])
             {
                 MobileConnection = false;
