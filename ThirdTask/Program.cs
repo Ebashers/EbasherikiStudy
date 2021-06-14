@@ -7,7 +7,7 @@ namespace ThirdTask
         static void Main(string[] args)
         {
             Person chel = new Person();
-            Person rolik = new Person("Rolik", "male", 69, 90, 160);
+            Person rolik = new Person("Rolik", "male", 69);
             Student mikrochel = new Student();
             Student zhmyh = new Student("Igor");
             Student ruslan = new Student(
