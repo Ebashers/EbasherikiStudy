@@ -18,7 +18,7 @@ namespace ThirdTask
             ruslan.GetStudentInfo();
             mikrochel.GetInfo();
             zhmyh.GetInfo();
-            
+
         }
     }
 }

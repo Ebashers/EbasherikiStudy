@@ -4,18 +4,13 @@ namespace ThirdTask
 {
     public class Student : Person
     {
-        string faculty;
-        int course;
-        int specialty;
-        int score;
+        string faculty { get; set; } = "WF";
+        int course { get; set; } = 1;
+        int specialty { get; set; } = 121;
+        int score { get; set; } = 60;
 
-        public Student()
-        {
-            faculty = "WF";
-            course = 1;
-            specialty = 121;
-            score = 60;
-        }
+
+        public Student() {}
 
         public Student(string name) : base(name){}
         

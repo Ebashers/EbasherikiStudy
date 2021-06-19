@@ -4,17 +4,12 @@ namespace ThirdTask
 {
     public class Person
     {
-        public string name;
-        public string gender;
-        public int age;
+        public string name { get; set; } = "Unknown";
+        public string gender { get; set; } = "male";
+        public int age { get; set; } = 18;
 
 
-        public Person() 
-        {
-            name = "Unknown";
-            gender = "male";
-            age = 18;
-        }
+        public Person() {}
 
         public Person(string name)
         {
