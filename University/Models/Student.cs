@@ -12,6 +12,6 @@ namespace University.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public int GradebookId { get; set; }    // айді заліковки
-        public int GPA { get; set; }            // середній бал
+        public double GPA { get; set; }         // середній бал
     }
 }
