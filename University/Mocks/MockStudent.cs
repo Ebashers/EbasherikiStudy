@@ -29,6 +29,20 @@ namespace University.Mocks
                         Surname = "Pidrilovich",
                         GradebookId = 0302,
                         GPA = 95.6
+                    },
+                    new Student
+                    {
+                        Name = "Hui",
+                        Surname = "Ivanovick",
+                        GradebookId = 0303,
+                        GPA = 100
+                    },
+                    new Student
+                    {
+                        Name = "Pizdec",
+                        Surname = "Zhopovich",
+                        GradebookId = 0304,
+                        GPA = 68.2
                     }
                 };
             }
