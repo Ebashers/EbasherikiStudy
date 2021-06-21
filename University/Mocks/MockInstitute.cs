@@ -17,7 +17,6 @@ namespace University.Mocks
                 return new List<Institute>
                 {
                     new Institute { Id = 1, Name = "KPI", Faculties = new List<Faculty>()},
-                    new Institute { Id = 2, Name = "HPI"}
                 };
             }
         }
