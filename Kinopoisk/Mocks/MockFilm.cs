@@ -18,12 +18,12 @@ namespace Kinopoisk.Mocks
                 {
                     new Film
                     {
-                        Id = 0,
+                        Id = 1,
                         Name = "Biba i Boba"
                     },
                     new Film
                     {
-                        Id = 1,
+                        Id = 2,
                         Name = "Ya ebu sobak"
                     },
                     new Film
