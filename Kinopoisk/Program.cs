@@ -13,10 +13,6 @@ namespace Kinopoisk
             var films = new MockFilm().Films;
             var movieDB = new MockMovieDB().MovieDBs;
 
-            var connection = from actor in actors
-                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
-                             join film in films on actorFilm.FilmId equals film.Id
-                             select $"{actor.Name} {film.Name}";
             /*
             
             Я їбав тупить над селектом в цьому варіанті
@@ -36,11 +32,10 @@ namespace Kinopoisk
             }).SelectMany(movieDB, actors => actors.Name, films => films.Name);
             */
 
-            foreach (var c in connection)
-            {
-                Console.WriteLine(c);
-            }
-            Console.WriteLine();
+            var connection = from actor in actors
+                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
+                             join film in films on actorFilm.FilmId equals film.Id
+                             select $"{actor.Name} {film.Name}";
 
             foreach (var a in actors)
             {
@@ -49,6 +44,12 @@ namespace Kinopoisk
                     Console.WriteLine(a.Name);
                 }
             }
+
+            var max = from actor in actors
+                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
+                             join film in films on actorFilm.FilmId equals film.Id
+                             select actor.Name.Max();
+
         }
     }
 }
