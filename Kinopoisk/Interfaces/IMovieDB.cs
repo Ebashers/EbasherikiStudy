@@ -9,6 +9,6 @@ namespace Kinopoisk.Interfaces
 {
     public interface IMovieDB
     {
-        IEnumerable<MovieDB> MovieDBs { get; }
+        IEnumerable<ActorFilm> MovieDBs { get; }
     }
 }
