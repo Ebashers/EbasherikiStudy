@@ -6,7 +6,7 @@
         {
             int i;
             var max = list[0];
-            for (i = 1; i < length; i++)
+            for (i = 1; i < list.Length; i++)
                 if (list[i] > max)
                     max = list[i];
  

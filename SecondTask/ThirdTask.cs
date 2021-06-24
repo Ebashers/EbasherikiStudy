@@ -8,7 +8,7 @@ namespace FirstTask
         {
             int i;
             var newList = new int[lenght];
-            for (i = 0; i < lenght; i++)
+            for (i = 0; i < list.Length; i++)
             {
                 if (list[i] < 0)
                 {
@@ -22,7 +22,7 @@ namespace FirstTask
 
                 if (list[i] == 0)
                 {
-                    newList[i] = list[i] = -2;
+                    newList[i] = -2;
                 }
             }
             return newList;

@@ -6,7 +6,7 @@
         {
             int i;
             var count = 0;
-            for (i = 0; i < length; i++)
+            for (i = 0; i < list.Length; i++)
             {
                 if (list[i] < 0)  
                 count++;  
