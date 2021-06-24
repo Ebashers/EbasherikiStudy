@@ -30,12 +30,7 @@ namespace Kinopoisk
 
             //}).Select(actor => actor.ActorId);
 
-
-            var connection = from actor in actors
-                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
-                             join film in films on actorFilm.FilmId equals film.Id
-                             select actor.Name + film.Name + actor.Id + film.Id;
-
+            //First task
             foreach (var a in actors)
             {
                 if (!movieDB.Any(x => x.ActorId == a.Id))
@@ -45,17 +40,28 @@ namespace Kinopoisk
             }
             Console.WriteLine();
 
-            var repeat = connection.GroupBy(actor => actor).Where(film => film.Count() > 1).Select(r => new { Element = r.Key, Counter = r.Count() }).ToList();
+            //Second task
+            var firstActor = Convert.ToString(Console.ReadLine());
+            var connection = (from actor in actors
+                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
+                             join film in films on actorFilm.FilmId equals film.Id
+                             select new { film.Name, ActorName = actor.Name }).ToList();
+
+            
+
+            //Third task
+            var repeat = connection.GroupBy(film => film).Where(connection => connection.Count() > 1).Select(r => new { Element = r.Key, Counter = r.Count() }).ToList();
             var max = repeat.Max(r => r.Counter);
-            var maxFilm = connection.Where(actor => actor.Count() == max).ToList();
+            var maxFilm = connection.GroupBy(film => film).Where(connection => connection.Count() == max).ToList();
 
+            foreach (var m in maxFilm)
+            {
+                Console.WriteLine(m.Key);
+            }
             Console.WriteLine(maxFilm);
-            //var max = from actor in actors
-            //                 join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
-            //                 join film in films on actorFilm.FilmId equals film.Id
-            //                 select actor.Name.Count();
+            Console.WriteLine();
 
-            //var maxFilm = connection.Where(actor => actor. == max).ToList();
+            Console.ReadKey();
         }
     }
 }
