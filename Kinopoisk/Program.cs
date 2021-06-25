@@ -11,7 +11,7 @@ namespace Kinopoisk
         {
             var actors = new MockActor().Actors;
             var films = new MockFilm().Films;
-            var movieDB = new MockMovieDB().MovieDBs;
+            var actorFilms = new MockActorFilm().ActorFilms;
 
             //Я їбав тупить над селектом в цьому варіанті
 
@@ -31,9 +31,10 @@ namespace Kinopoisk
             //}).Select(actor => actor.ActorId);
 
             //First task
+            Console.WriteLine("Actor without film");
             foreach (var a in actors)
             {
-                if (!movieDB.Any(x => x.ActorId == a.Id))
+                if (!actorFilms.Any(x => x.ActorId == a.Id))
                 {
                     Console.WriteLine(a.Name);
                 }
@@ -41,10 +42,12 @@ namespace Kinopoisk
             Console.WriteLine();
 
             //Second task
+            Console.WriteLine("Enter the name of the actor");
             var firstActor = Convert.ToString(Console.ReadLine());
             Console.WriteLine();
+            Console.WriteLine("All actor's films and another films' actors");
             var connection = (from actor in actors
-                             join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
+                             join actorFilm in actorFilms on actor.Id equals actorFilm.ActorId
                              join film in films on actorFilm.FilmId equals film.Id
                              select new { FilmName = film.Name, ActorName = actor.Name }).ToList();
 
@@ -66,17 +69,17 @@ namespace Kinopoisk
                 }
                 else Console.WriteLine("Fuck u");
             }
+            Console.WriteLine();
 
             //Third task
-            var repeat = connection.GroupBy(FilmName => FilmName).Where(connection => connection.Count() > 1).Select(r => new { Element = r.Key, Counter = r.Count() }).ToList();
-            var max = repeat.Max(r => r.Counter);
-            var maxFilm = connection.GroupBy(FilmName => FilmName).Where(connection => connection.Count() == max).ToList();
+            Console.WriteLine("Film with the biggest amount of actors");
+            var max = connection.Max(c => c.FilmName.Count());
+            var maxFilm = connection.Where(c => c.FilmName.Count() == max).ToList();
 
             foreach (var m in maxFilm)
             {
-                Console.WriteLine(m.Key);
+                Console.WriteLine(m);
             }
-            Console.WriteLine(maxFilm);
             Console.WriteLine();
 
             Console.ReadKey();

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Kinopoisk.Mocks
 {
-    public class MockMovieDB : IMovieDB
+    public class MockActorFilm : IActorFilm
     {
-        public IEnumerable<ActorFilm> MovieDBs
+        public IEnumerable<ActorFilm> ActorFilms
         {
             get
             {

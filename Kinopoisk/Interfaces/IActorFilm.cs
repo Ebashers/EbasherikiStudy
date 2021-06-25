@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Kinopoisk.Interfaces
 {
-    public interface IMovieDB
+    public interface IActorFilm
     {
-        IEnumerable<ActorFilm> MovieDBs { get; }
+        IEnumerable<ActorFilm> ActorFilms { get; }
     }
 }
