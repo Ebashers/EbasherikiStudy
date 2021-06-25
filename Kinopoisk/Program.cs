@@ -42,17 +42,35 @@ namespace Kinopoisk
 
             //Second task
             var firstActor = Convert.ToString(Console.ReadLine());
+            Console.WriteLine();
             var connection = (from actor in actors
                              join actorFilm in movieDB on actor.Id equals actorFilm.ActorId
                              join film in films on actorFilm.FilmId equals film.Id
-                             select new { film.Name, ActorName = actor.Name }).ToList();
+                             select new { FilmName = film.Name, ActorName = actor.Name }).ToList();
 
-            
+            foreach (var c in connection)
+            {
+                if (firstActor == c.ActorName)
+                {
+                    var thisFilms = connection.Where(c => c.ActorName == firstActor).Select(c => c.FilmName).ToList();
+                    foreach (var t in thisFilms)
+                    {
+                        var thisActors = connection.Where(c => c.FilmName == t).Select(c => c.ActorName).ToList();
+                        Console.WriteLine(t);
+                        foreach (var filmActor in thisActors)
+                        {
+                            Console.WriteLine(filmActor);
+                        }
+                        Console.WriteLine();
+                    }
+                }
+                else Console.WriteLine("Fuck u");
+            }
 
             //Third task
-            var repeat = connection.GroupBy(film => film).Where(connection => connection.Count() > 1).Select(r => new { Element = r.Key, Counter = r.Count() }).ToList();
+            var repeat = connection.GroupBy(FilmName => FilmName).Where(connection => connection.Count() > 1).Select(r => new { Element = r.Key, Counter = r.Count() }).ToList();
             var max = repeat.Max(r => r.Counter);
-            var maxFilm = connection.GroupBy(film => film).Where(connection => connection.Count() == max).ToList();
+            var maxFilm = connection.GroupBy(FilmName => FilmName).Where(connection => connection.Count() == max).ToList();
 
             foreach (var m in maxFilm)
             {
