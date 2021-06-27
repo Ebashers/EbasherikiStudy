@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Kinopoisk.Mocks;
-using Kinopoisk.Models;
 
 namespace Kinopoisk
 {
@@ -67,7 +66,6 @@ namespace Kinopoisk
                         Console.WriteLine();
                     }
                 }
-                else Console.WriteLine("Fuck u");
             }
             Console.WriteLine();
 
@@ -75,7 +73,6 @@ namespace Kinopoisk
             Console.WriteLine("Film with the biggest amount of actors");
             var max = connection.Max(c => c.FilmName.Count());
             var maxFilm = connection.Where(c => c.FilmName.Count() == max).ToList();
-
             foreach (var m in maxFilm)
             {
                 Console.WriteLine(m);
