@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Kinopoisk.Mocks;
+using Kinopoisk.Models;
 
 namespace Kinopoisk
 {
@@ -14,20 +15,19 @@ namespace Kinopoisk
 
             //Я їбав тупить над селектом в цьому варіанті
 
-            //var conn = actors.Join(movieDB, actors => actors.Id, movieDB => movieDB.ActorId, (actor, moviedb) => new ActorFilm
+            //var conn = actors.Join(actorFilms, actors => actors.Id, actorFilms => actorFilms.ActorId, (actor, actorFilm) => new ActorFilm
             //{
-            //    Id = moviedb.Id,
+            //    Id = actorFilm.Id,
             //    ActorId = actor.Id,
-            //    FilmId = moviedb.FilmId,
-            //    Films = actor.ToList()
+            //    FilmId = actorFilm.FilmId,
 
-            //}).Join(films, movieDB => movieDB.FilmId, films => films.Id, (moviedb, film) => new ActorFilm
+            //}).Join(films, actorFilms => actorFilms.FilmId, films => films.Id, (actorFilm, film) => new ActorFilm
             //{
-            //    Id = moviedb.Id,
-            //    ActorId = moviedb.ActorId,
+            //    Id = actorFilm.Id,
+            //    ActorId = actorFilm.ActorId,
             //    FilmId = film.Id
 
-            //}).Select(actor => actor.ActorId);
+            //}).Select(s => new { s, FilmName = film.Name, ActorName = actor.Name }).ToList();
 
             //First task
             Console.WriteLine("Actor without film");
