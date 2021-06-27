@@ -4,33 +4,32 @@ namespace ThirdTask
 {
     public class Person
     {
-        public string name { get; set; } = "Unknown";
-        public string gender { get; set; } = "male";
-        public int age { get; set; } = 18;
+        public string Name { get; set; } = "Unknown";
+        public string Gender { get; set; } = "male";
+        public int Age { get; set; } = 18;
 
 
         public Person() {}
 
         public Person(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
         
         public Person(string name, string gender) : this(name) 
         {
-            this.gender = gender;
+            this.Gender = gender;
         }
         
         public Person(string name, string gender, int age) : this(name, gender) 
         {
-            this.age = age;
+            this.Age = age;
         }
         
 
-        public virtual void GetInfo()
-        {
-            Console.WriteLine
-                ($"\nName: {name} \nGender: {gender} \nAge: {age} ");
+        public virtual string GetInfo()
+        { 
+            return ($"\nName: {Name} \nGender: {Gender} \nAge: {Age} ");
         }
     }
 }
