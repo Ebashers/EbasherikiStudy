@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Task2.MathModules_2;
+using System;
 
 namespace Task2
 {
