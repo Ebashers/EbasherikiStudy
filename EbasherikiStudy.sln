@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdTask", "ThirdTask\Thir
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "University", "University\University.csproj", "{E0059FB4-7C39-4497-9ACA-9FE3F2B329BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinopoisk", "Kinopoisk\Kinopoisk.csproj", "{0565F34F-8806-4DE9-A549-8857ED52AE65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kinopoisk", "Kinopoisk\Kinopoisk.csproj", "{0565F34F-8806-4DE9-A549-8857ED52AE65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory", "CarFactory\CarFactory.csproj", "{32B93F33-71B9-411F-9AF2-60A9D2D001F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0565F34F-8806-4DE9-A549-8857ED52AE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0565F34F-8806-4DE9-A549-8857ED52AE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0565F34F-8806-4DE9-A549-8857ED52AE65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B93F33-71B9-411F-9AF2-60A9D2D001F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B93F33-71B9-411F-9AF2-60A9D2D001F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B93F33-71B9-411F-9AF2-60A9D2D001F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B93F33-71B9-411F-9AF2-60A9D2D001F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
