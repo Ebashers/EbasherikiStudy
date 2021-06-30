@@ -19,8 +19,8 @@ namespace SecondTask
             }
             
             Console.WriteLine("");
-            Console.WriteLine("Amount of elements that < 0 = " + FirstTask.CalcNegative(rndmlist, listSize));
-            Console.WriteLine("Largest element in list = " + SecondTask.LargestElement(rndmlist, listSize));
+            Console.WriteLine("Amount of elements that < 0 = " + FirstTask.CalcNegative(rndmlist));
+            Console.WriteLine("Largest element in list = " + SecondTask.LargestElement(rndmlist));
             
             
             Console.WriteLine("New array according to third task = " );

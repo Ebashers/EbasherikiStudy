@@ -11,7 +11,7 @@ namespace SecondTask
             int[] randomList = new int[x];
             for (i = 0; i < x; i++)
             {
-                randomList[i] = genrList.Next(-7, 9);
+                randomList[i] = genrList.Next(-9, 9);
                 
             }
 

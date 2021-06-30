@@ -2,7 +2,7 @@
 {
     public static class FirstTask
     {
-        public static int CalcNegative(int[] list, int length)
+        public static int CalcNegative(int[] list)
         {
             int i;
             var count = 0;
