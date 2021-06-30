@@ -11,7 +11,7 @@ namespace ThirdTask
             Student mikrochel = new Student();
             Student zhmyh = new Student("Igor");
             Student ruslan = new Student(
-                "Ruslan", "male", 14, 120, 180, "FICT", 3, 122, 100);
+                "Ruslan", "male", 14, "FICT", 3, 122, 100);
             Console.WriteLine(chel.GetInfo());
             Console.WriteLine(rolik.GetInfo());
             Console.WriteLine(ruslan.GetInfo());

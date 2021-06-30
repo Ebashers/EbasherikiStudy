@@ -13,17 +13,17 @@ namespace ThirdTask
 
         public Person(string name)
         {
-            this.Name = name;
+            Name = name;
         }
         
         public Person(string name, string gender) : this(name) 
         {
-            this.Gender = gender;
+            Gender = gender;
         }
         
         public Person(string name, string gender, int age) : this(name, gender) 
         {
-            this.Age = age;
+            Age = age;
         }
         
 

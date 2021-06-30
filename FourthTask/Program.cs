@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
+using FourthTask.Blog;
 
 namespace FourthTask
 {
@@ -22,12 +24,12 @@ namespace FourthTask
             
             void GetMaxSalary()
             {
-                int maxSalary = employeesList[0].salary;
+                int maxSalary = employeesList[0].Salary;
                 foreach (var i in employeesList)
                 {
-                    if (maxSalary < i.salary)
+                    if (maxSalary < i.Salary)
                     {
-                        maxSalary = i.salary;
+                        maxSalary = i.Salary;
                     }
                 }
                 Console.WriteLine("Max salary is:" + maxSalary);
@@ -35,15 +37,15 @@ namespace FourthTask
             
             void EgalitarianDepart()
             {
-                foreach (var department in ebasheri.departments)
+                foreach (var department in ebasheri.Departments)
                 {
-                    Employee departChief = department.chief;
-                    foreach (var employee in department.employees)
+                    Employee departChief = department.Chief;
+                    foreach (var employee in department.Employees)
                     {
-                        if (departChief.salary < employee.salary)
+                        if (departChief.Salary < employee.Salary)
                         {
                             Console.WriteLine
-                                ($"In department {department.departmentName} employee has bigger salary than chief");
+                                ($"In department {department.DepartmentName} employee has bigger salary than chief");
                             break;
                         }
                     }
@@ -52,6 +54,27 @@ namespace FourthTask
             
             GetMaxSalary();
             EgalitarianDepart();
+            Console.WriteLine("List of employees:");
+            foreach (var employee in employeesList)
+            {
+                Console.WriteLine(employee.Name);    
+            }
+            
+            Console.WriteLine("--------------------------------------------------------------------\nSecond Part\n");
+            
+            
+            
+            Comment kola = new Employee("Kola", "Arharov", 1000);
+            Comment victor = new Employee("Victor", "Savinov", 300);
+            Comment fox = new Employee("Fox", "Sleepy", 300);
+            Comment pavel = new Employee("Pavel", "Kuzennyi", 500);
+            Comment zefir = new Employee("Zefir", "Lover", 100);
+            Comment kate = new Employee("Kate", "Filonenko", 100);
+            Comment sonya = new Employee("Sonya", "Len", 100);
+            Video coders = new Department("Coders", victor, new List<Employee>{pavel, zefir});
+            Video intro = new Video("Intro для канала Элез", "https://www.youtube.com/watch?v=6vshj3lPUx0",
+                4516796, 19809, 5020,  new List<Comment>{kate, sonya});
+            Blog elez = new Blog("Элез", new List<Video>(,));
             
         }
     }

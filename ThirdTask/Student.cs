@@ -22,33 +22,32 @@ namespace ThirdTask
         public Student(string name, string gender, int age, string faculty)
             : base(name, gender, age)
         {
-            this.Faculty = faculty;
+            Faculty = faculty;
         }
         
         public Student(string name, string gender, int age, string faculty, int course)
             : base(name, gender, age)
         {
-            this.Faculty = faculty;
-            this.Course = course;
+            Faculty = faculty;
+            Course = course;
         }
         
         public Student(
-            string name, string gender, int age, int weight, int height, string faculty, int course, int specialty)
+            string name, string gender, int age, string faculty, int course, int specialty)
             : base(name, gender, age)
         {
-            this.Faculty = faculty;
-            this.Course = course;
-            this.Specialty = specialty;
+            Faculty = faculty;
+            Course = course;
+            Specialty = specialty;
         }
         
-        public Student(string name, string gender, int age, 
-            int weight, int height, string faculty, int course, int specialty, int score)
+        public Student(string name, string gender, int age, string faculty, int course, int specialty, int score)
             : base(name, gender, age)
         {
-            this.Faculty = faculty;
-            this.Course = course;
-            this.Specialty = specialty;
-            this.Score = score;
+            Faculty = faculty;
+            Course = course;
+            Specialty = specialty;
+            Score = score;
         }
         
         
