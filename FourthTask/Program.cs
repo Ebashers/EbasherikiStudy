@@ -62,19 +62,12 @@ namespace FourthTask
             
             Console.WriteLine("--------------------------------------------------------------------\nSecond Part\n");
             
-            
-            
-            Comment kola = new Employee("Kola", "Arharov", 1000);
-            Comment victor = new Employee("Victor", "Savinov", 300);
-            Comment fox = new Employee("Fox", "Sleepy", 300);
-            Comment pavel = new Employee("Pavel", "Kuzennyi", 500);
-            Comment zefir = new Employee("Zefir", "Lover", 100);
-            Comment kate = new Employee("Kate", "Filonenko", 100);
-            Comment sonya = new Employee("Sonya", "Len", 100);
-            Video coders = new Department("Coders", victor, new List<Employee>{pavel, zefir});
+            Comment sonya = new Comment("Sonya", "Len", 100);
+            Video warface = new Video("Warface: НАЧАТЬ С НУЛЯ?", "https://www.youtube.com/watch?v=jgELCkPJ4LQ",
+                1791927, 30764, 5672,  new List<Comment>{, sonya});
             Video intro = new Video("Intro для канала Элез", "https://www.youtube.com/watch?v=6vshj3lPUx0",
-                4516796, 19809, 5020,  new List<Comment>{kate, sonya});
-            Blog elez = new Blog("Элез", new List<Video>(,));
+                4516796, 19809, 5020,  new List<Comment>{, sonya});
+            Blog elez = new Blog("Элез", , new List<Video>(intro, warface));
             
         }
     }

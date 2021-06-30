@@ -4,10 +4,10 @@ namespace ThirdTask
 {
     public class Student : Person
     {
-        string Faculty { get; set; } = "WF";
-        int Course { get; set; } = 1;
-        int Specialty { get; set; } = 121;
-        int Score { get; set; } = 60;
+        public string Faculty { get; set; } = "WF";
+        public int Course { get; set; } = 1;
+        public int Specialty { get; set; } = 121;
+        public int Score { get; set; } = 60;
 
 
         public Student() {}
