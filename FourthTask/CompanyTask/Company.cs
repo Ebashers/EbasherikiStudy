@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FourthTask
+namespace FourthTask.CompanyTask
 {
     public class Company
     {

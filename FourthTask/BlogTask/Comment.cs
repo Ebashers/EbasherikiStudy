@@ -1,4 +1,4 @@
-namespace FourthTask.Blog
+namespace FourthTask.BlogTask
 {
     public class Comment
     {

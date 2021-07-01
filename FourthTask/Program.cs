@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata;
-using FourthTask.Blog;
+using System.Text.RegularExpressions;
+using FourthTask.CompanyTask;
+using FourthTask.BlogTask;
+
+
 
 namespace FourthTask
 {
@@ -9,6 +14,8 @@ namespace FourthTask
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\nFirst Part\n");
+            
             Employee kola = new Employee("Kola", "Arharov", 1000);
             Employee victor = new Employee("Victor", "Savinov", 300);
             Employee fox = new Employee("Fox", "Sleepy", 300);
@@ -62,13 +69,62 @@ namespace FourthTask
             
             Console.WriteLine("--------------------------------------------------------------------\nSecond Part\n");
             
-            Comment sonya = new Comment("Sonya", "Len", 100);
-            Video warface = new Video("Warface: НАЧАТЬ С НУЛЯ?", "https://www.youtube.com/watch?v=jgELCkPJ4LQ",
-                1791927, 30764, 5672,  new List<Comment>{, sonya});
-            Video intro = new Video("Intro для канала Элез", "https://www.youtube.com/watch?v=6vshj3lPUx0",
-                4516796, 19809, 5020,  new List<Comment>{, sonya});
-            Blog elez = new Blog("Элез", , new List<Video>(intro, warface));
+            Comment introComment1 = new Comment
+                ("' Всем привет, с вами Элез '  Мне больше нравился ^_^ ", 159, 15);
             
+            Comment introComment2 = new Comment
+                ("6 лет назад... и тут рекомендация", 10, 1);
+            
+            Comment warfaceComment1 = new Comment
+                ("Мне кажется,Элез бы отлично сыграл Джокера. Пугающе. Именно.", 228000000, 28);
+            
+            Comment warfaceComment2 = new Comment
+                ("у меня мурашки по коже когда он разговаривает", 8, 0);
+
+            Video warface = new Video("Warface: НАЧАТЬ С НУЛЯ?", "https://www.youtube.com/watch?v=jgELCkPJ4LQ",
+                1791927, 30764, 5672,  new List<Comment>{warfaceComment1, warfaceComment2});
+            Video intro = new Video("Intro для канала Элез", "https://www.youtube.com/watch?v=6vshj3lPUx0",
+                4516796, 19809, 5020,  new List<Comment>{introComment1, introComment2});
+            Blog eles = new Blog("Элез", new List<Video>{warface, intro});
+            
+            int GetViewsSum()
+            {
+                /*
+                int viewsSum = 0;
+                foreach (var video in eles.VideosList)
+                {
+                    viewsSum += video.Views;
+                }
+                */
+                var viewsSum = (from video in eles.VideosList select video.Views).Sum();
+                return viewsSum;
+            }
+
+            bool HasTopComment()
+            {
+                var topComment = (from videoList in eles.VideosList select 
+                        (videoList.Likes, from comment in videoList.CommentsList select comment.Likes)).Any
+                    (v => v.Likes < v.Item2.Max());
+                return topComment;
+            }
+
+            IEnumerable<Video> MostDislikedVideos()
+            {
+                int mostDislikes = (from video in eles.VideosList select video.Dislikes).Max();
+                var mostDislikesList = (from video in eles.VideosList select video).TakeWhile
+                    (v => v.Dislikes == mostDislikes);
+                return mostDislikesList;
+            }
+
+            Console.WriteLine("Sum of views: " + GetViewsSum());
+            Console.WriteLine(HasTopComment()
+                ? "There is a comment that got more likes than a video"
+                : "There is NO comment that got more likes than a video");
+            Console.WriteLine("Most disliked videos: ");
+            foreach (var video in MostDislikedVideos())
+            {
+                Console.WriteLine($"'{video.VideoName}' has {video.Dislikes} dislikes");
+            }
         }
     }
 }

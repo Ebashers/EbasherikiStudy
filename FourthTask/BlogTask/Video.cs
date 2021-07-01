@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FourthTask.Blog
+namespace FourthTask.BlogTask
 {
     public class Video
     {
@@ -19,7 +19,7 @@ namespace FourthTask.Blog
         
         public Video(string videoName, string url) : this(videoName) 
         {
-            VideoName = videoName;
+            Url = url;
         }
         
         

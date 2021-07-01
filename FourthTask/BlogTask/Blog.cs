@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FourthTask.Blog
+namespace FourthTask.BlogTask
 {
     public class Blog
     {
