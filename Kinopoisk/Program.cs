@@ -50,23 +50,18 @@ namespace Kinopoisk
                              join film in films on actorFilm.FilmId equals film.Id
                              select new { FilmName = film.Name, ActorName = actor.Name }).ToList();
 
-            foreach (var c in connection)
+            var selectedActorFilms = connection.Where(c => c.ActorName.ToLower() == firstActor.ToLower()).Select(f => f.FilmName).ToList();
+            foreach (var s in selectedActorFilms)
             {
-                if (firstActor == c.ActorName)
+                var thisActors = connection.Where(c => c.FilmName == s).Select(c => c.ActorName).ToList();
+                Console.WriteLine(s);
+                foreach (var filmActor in thisActors)
                 {
-                    var thisFilms = connection.Where(c => c.ActorName == firstActor).Select(c => c.FilmName).ToList();
-                    foreach (var t in thisFilms)
-                    {
-                        var thisActors = connection.Where(c => c.FilmName == t).Select(c => c.ActorName).ToList();
-                        Console.WriteLine(t);
-                        foreach (var filmActor in thisActors)
-                        {
-                            Console.WriteLine(filmActor);
-                        }
-                        Console.WriteLine();
-                    }
+                    Console.WriteLine(filmActor);
                 }
+                Console.WriteLine();
             }
+
             Console.WriteLine();
 
             //Third task
