@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kinopoisk", "Kinopoisk\Kino
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory", "CarFactory\CarFactory.csproj", "{32B93F33-71B9-411F-9AF2-60A9D2D001F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMicrofactoryKolaCationEdition", "CarMicrofactoryKolaCationEdition\CarMicrofactoryKolaCationEdition.csproj", "{64C5F77D-F171-4A92-86A4-06EF53D103A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCarFactory", "CarMicrofactoryKolaCationEdition\FluentCarFactory.csproj", "{64C5F77D-F171-4A92-86A4-06EF53D103A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

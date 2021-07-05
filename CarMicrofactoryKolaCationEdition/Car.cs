@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarMicrofactoryKolaCationEdition
+namespace FluentCarFactory
 {
     public class Car
     {
-        public bool Engine { get; set; }
-        public bool Body { get; set; }
-        public bool Options { get; set; }
-        public bool Suspension { get; set; }
+        public string Engine { get; set; }
+        public string Body { get; set; }
+        public string Options { get; set; }
+        public string Suspension { get; set; }
+
+        public static CarBuilder CreateCar()
+        {
+            return new CarBuilder();
+        }
     }
 }
