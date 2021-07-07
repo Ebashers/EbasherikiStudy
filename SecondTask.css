@@ -17,6 +17,7 @@
     padding: 0.7rem 0.8rem;
     font-size: 1rem;
     color: red;
+    cursor: pointer;
 }
 input::placeholder{
     color: red;
@@ -35,4 +36,20 @@ th, td{
     border: 1px solid black;
     width: 10%;
     height: 50%;
+    text-align: center;
+}
+.btn_window{
+    cursor: pointer;
+    padding: 0.5rem 1.1rem;
+    margin: 15% 20%;
+    border: 2px solid skyblue;
+    background: lightskyblue;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+}
+.btn_window:hover{
+    background: white;
+    color: lightskyblue;
+    transition: all 0.4s;
 }

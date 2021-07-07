@@ -1,0 +1,1 @@
+<a href="#" className="btn btn-primary">Открыть модальное окно</a>
