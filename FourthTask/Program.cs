@@ -29,38 +29,32 @@ namespace FourthTask
             
             List<Employee> employeesList = new List<Employee> {kola, victor, fox, pavel, zefir, kate, sonya};
             
-            void GetMaxSalary()
+            int GetMaxSalary()
             {
-                int maxSalary = employeesList[0].Salary;
-                foreach (var i in employeesList)
-                {
-                    if (maxSalary < i.Salary)
-                    {
-                        maxSalary = i.Salary;
-                    }
-                }
-                Console.WriteLine("Max salary is:" + maxSalary);
+                var maxSalary = employeesList.Select(e=>e.Salary).Max(); 
+                return maxSalary;
             }
             
-            void EgalitarianDepart()
+            List<Department> EgalitarianDepart()
             {
-                foreach (var department in ebasheri.Departments)
-                {
-                    Employee departChief = department.Chief;
-                    foreach (var employee in department.Employees)
-                    {
-                        if (departChief.Salary < employee.Salary)
-                        {
-                            Console.WriteLine
-                                ($"In department {department.DepartmentName} employee has bigger salary than chief");
-                            break;
-                        }
-                    }
-                }
+                var egalitarianDepart = ebasheri.Departments.Where(
+                    d => d.Chief.Salary < d.Employees.Select(e => e.Salary).Max()).ToList();
+                return egalitarianDepart;
             }
             
-            GetMaxSalary();
-            EgalitarianDepart();
+            Console.WriteLine("Max salary: " + GetMaxSalary());
+            if (EgalitarianDepart().Count != 0)
+            {
+                foreach (var d in EgalitarianDepart())
+                {
+                    Console.WriteLine($"In {d.DepartmentName} department employee has bigger salary than chief");    
+                }
+            }
+            else
+            {
+                Console.WriteLine("There is no department where employee has bigger salary than chief");
+            }
+
             Console.WriteLine("List of employees:");
             foreach (var employee in employeesList)
             {
