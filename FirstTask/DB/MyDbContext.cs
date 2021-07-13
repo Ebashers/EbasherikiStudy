@@ -1,7 +1,7 @@
-﻿using FirstTask.Models;
+﻿using University2.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FirstTask.DB
+namespace University2.DB
 {
     public class MyDbContext : DbContext
     {

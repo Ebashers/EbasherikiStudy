@@ -1,4 +1,4 @@
-﻿namespace FirstTask.Models
+﻿namespace University2.Models
 {
     public sealed class Student
     {

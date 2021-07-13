@@ -1,9 +1,9 @@
-﻿using FirstTask.DB;
+﻿using University2.DB;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
-namespace FirstTask
+namespace University2
 {
     class Program
     {
