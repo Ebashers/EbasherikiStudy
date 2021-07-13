@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory", "CarFactory\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCarFactory", "CarMicrofactoryKolaCationEdition\FluentCarFactory.csproj", "{64C5F77D-F171-4A92-86A4-06EF53D103A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "University2", "FirstTask\University2.csproj", "{61195871-4AB5-4623-9F3E-DCCB633FAA67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFUniversity", "EFUniversity\EFUniversity.csproj", "{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +47,10 @@ Global
 		{64C5F77D-F171-4A92-86A4-06EF53D103A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C5F77D-F171-4A92-86A4-06EF53D103A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C5F77D-F171-4A92-86A4-06EF53D103A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
