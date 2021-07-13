@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory", "CarFactory\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCarFactory", "CarMicrofactoryKolaCationEdition\FluentCarFactory.csproj", "{64C5F77D-F171-4A92-86A4-06EF53D103A7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "University2", "FirstTask\University2.csproj", "{61195871-4AB5-4623-9F3E-DCCB633FAA67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
