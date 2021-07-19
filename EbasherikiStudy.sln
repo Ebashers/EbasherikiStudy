@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory", "CarFactory\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCarFactory", "CarMicrofactoryKolaCationEdition\FluentCarFactory.csproj", "{64C5F77D-F171-4A92-86A4-06EF53D103A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFUniversity", "EFUniversity\EFUniversity.csproj", "{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFUniversity", "EFUniversity\EFUniversity.csproj", "{A1E0A2E7-8E22-4CFB-84D8-08DF16A86794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFKinopoisk", "EFKinopoisk\EFKinopoisk.csproj", "{BED23FA8-D8D0-4B74-87A0-724EABEDC371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFKinopoisk", "EFKinopoisk\EFKinopoisk.csproj", "{BED23FA8-D8D0-4B74-87A0-724EABEDC371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFKinopoisk5", "EFKinopoisk5\EFKinopoisk5.csproj", "{E0C11074-BBD8-48E5-A9CC-E2A42A2D597F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BED23FA8-D8D0-4B74-87A0-724EABEDC371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BED23FA8-D8D0-4B74-87A0-724EABEDC371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BED23FA8-D8D0-4B74-87A0-724EABEDC371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C11074-BBD8-48E5-A9CC-E2A42A2D597F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C11074-BBD8-48E5-A9CC-E2A42A2D597F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C11074-BBD8-48E5-A9CC-E2A42A2D597F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C11074-BBD8-48E5-A9CC-E2A42A2D597F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
