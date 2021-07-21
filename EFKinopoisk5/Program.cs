@@ -60,8 +60,30 @@ namespace EFKinopoisk5
             var firstActor = Convert.ToString(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine("All actor's films and another films' actors");
-            var selectedFilms = actors.Where(c => c.Name.ToLower() == firstActor.ToLower()).Select(f => f.Films).ToList();
-            selectedFilms.ForEach(sf => Console.WriteLine(sf));
+            var selectedFilms = actors.Where(a => a.Name.ToLower() == firstActor.ToLower()).Select(f => f.Films).ToList();
+            foreach (var sf in selectedFilms)
+            {
+                var thisFilmName = sf.Select(sf => sf.Name);
+                foreach (var tf in thisFilmName)
+                {
+                    var thisFilms = films.Where(f => f.Name == tf).Select(f => f.Name).ToList();
+                    thisFilms.ForEach(film => Console.WriteLine(film));
+
+                    var thisActorsCollection = films.Where(f => f.Name == tf).Select(a => a.Actors).ToList();
+                    foreach (var taCollection in thisActorsCollection)
+                    {
+                        var thisActors = taCollection.Select(a => a.Name).ToList();
+                        thisActors.ForEach(filmActor => Console.WriteLine(filmActor));
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            Console.WriteLine("Film with the biggest amount of actors");
+            var filmCounts = await context.Films.Select(f => f.Actors.Count).ToListAsync();
+            var maxFilm = filmCounts.Max();
+            var maxFilmName = await context.Films.Where(f => f.Actors.Count == maxFilm).ToListAsync();
+            maxFilmName.ForEach(m => Console.WriteLine(m.Name));
         }
     }
 }
