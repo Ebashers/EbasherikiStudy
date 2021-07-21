@@ -59,10 +59,22 @@ namespace EFKinopoisk5
             Console.WriteLine("Enter the name of the actor");
             var firstActor = Convert.ToString(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("All actor's films and another films' actors");
+
             var selectedFilms = actors.Where(a => a.Name.ToLower() == firstActor.ToLower()).Select(f => f.Films).ToList();
+            if (selectedFilms.Count == 0)
+            {
+                Console.WriteLine("There is no actor named " + firstActor);
+                Console.WriteLine();
+            }
+            else
+                Console.WriteLine("All actor's films and another films' actors");
             foreach (var sf in selectedFilms)
             {
+                if (sf.Count == 0)
+                {
+                    Console.WriteLine("none");
+                    Console.WriteLine();
+                }
                 var thisFilmName = sf.Select(sf => sf.Name);
                 foreach (var tf in thisFilmName)
                 {
